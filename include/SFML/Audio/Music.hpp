@@ -223,7 +223,7 @@ protected:
     /// \return True to continue playback, false to stop
     ///
     ////////////////////////////////////////////////////////////
-    virtual bool onGetData(Chunk& data);
+    virtual bool onGetData(Chunk& data) override;
 
     ////////////////////////////////////////////////////////////
     /// \brief Change the current playing position in the stream source
@@ -231,7 +231,7 @@ protected:
     /// \param timeOffset New playing position, from the beginning of the music
     ///
     ////////////////////////////////////////////////////////////
-    virtual void onSeek(Time timeOffset);
+    virtual void onSeek(Time timeOffset) override;
 
     ////////////////////////////////////////////////////////////
     /// \brief Change the current playing position in the stream source to the loop offset
@@ -243,7 +243,7 @@ protected:
     /// \return The seek position after looping (or -1 if there's no loop)
     ///
     ////////////////////////////////////////////////////////////
-    virtual Int64 onLoop();
+    virtual Int64 onLoop() override;
 
 private:
 

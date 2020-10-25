@@ -30,7 +30,6 @@
 #include <SFML/Audio/Listener.hpp>
 #include <SFML/System/Err.hpp>
 #include <vector>
-#include <log.hpp>
 
 namespace
 {
@@ -52,7 +51,6 @@ AudioDevice::AudioDevice()
 {
 
     const char * devicename = alcGetString(NULL, ALC_DEFAULT_DEVICE_SPECIFIER);
-    log::debug("sfml","audio device name",devicename);
     // Create the device
     audioDevice = alcOpenDevice(devicename);
 
